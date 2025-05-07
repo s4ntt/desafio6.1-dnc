@@ -1,0 +1,88 @@
+### ---------------USUARIOS-----------------
+
+### GET all usuarios
+GET http://localhost:3000/usuarios
+
+### GET usuario by ID
+GET http://localhost:3000/usuarios/id
+
+### POST novo usuario
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+  "nome_usuario": "Jeca2",
+  "email_usuario": "x22@gmail.com",
+  "senha_usuario": "senha1234"
+}
+
+// ["6808e2887124edb2293fc807","6808e3ef7b62e8f5b76a7158"]
+
+### ---------------PRODUTOS-----------------
+
+### GET all produtos
+GET http://localhost:3000/produtos
+
+### GET produto by ID
+GET http://localhost:3000/produtos/6818cd1a9214c37d0218a4d6
+
+### POST novo produto
+POST http://localhost:3000/produtos
+Content-Type: application/json
+
+{
+  "nome_produto": "Short Polo",
+  "preco_produto": "10.90"
+}
+
+
+### ------------- ESTOQUE ------------------
+### GET all estoque
+GET http://localhost:3000/estoque
+
+### GET estoque by ID
+GET http://localhost:3000/estoque/id
+
+### POST novo estoque
+POST http://localhost:3000/estoque
+Content-Type: application/json
+
+{
+  "produto_id": "6818cd1a9214c37d0218a4d6",
+  "quantidade_estoque": 100
+}
+
+
+### ------------- PEDIDO ------------------
+### GET all pedidos
+GET http://localhost:3000/pedido
+
+### GET pedido by ID
+GET http://localhost:3000/pedidos/id
+
+### POST novo pedido
+POST http://localhost:3000/pedido
+Content-Type: application/json
+
+{
+  "usuario_id": "6808e15cb1f49ccccd917fdc",
+  "produtos_ids": ["6818cd1a9214c37d0218a4d6","6818cd439214c37d0218a4de"]
+}
+
+
+### ------------ VENDA ---------------------
+
+### GET all vendas
+GET http://localhost:3000/vendas
+
+### GET venda by ID
+GET http://localhost:3000/vendas/6818cae5a35afc57e4db7da1
+
+### POST nova venda
+POST http://localhost:3000/vendas
+Content-Type: application/json
+
+{
+  "pedido_id": "6818d4120f5014a4fec088d8",
+  "usuario_id": "6818cc05acf9d1b4595d8bf7"
+}

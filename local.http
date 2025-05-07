@@ -1,0 +1,30 @@
+### Listar todos os livros
+GET http://localhost:3000/livros
+
+### Obter um livro por ID
+GET http://localhost:3000/livros/{id}
+
+### Criar um novo livro
+POST http://localhost:3000/livros
+Content-Type: application/json
+
+{
+  "titulo": "Livro Exemplo",
+  "numeroPaginas": 200,
+  "isbn": "978-3-16-148410-0",
+  "editora": "Editora Exemplo"
+}
+
+### Atualizar um livro por ID
+PUT http://localhost:3000/livros/{id}
+Content-Type: application/json
+
+{
+  "titulo": "Livro Atualizado",
+  "numeroPaginas": 250,
+  "isbn": "978-3-16-148410-0",
+  "editora": "Nova Editora"
+}
+
+### Remover um livro por ID
+DELETE http://localhost:3000/livros/{id}
